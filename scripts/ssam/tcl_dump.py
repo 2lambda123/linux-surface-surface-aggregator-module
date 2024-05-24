@@ -51,9 +51,8 @@ def main():
 
             if end != 0:
                 break
-
-    out = open(f"tclbuf_iid{iid}_bufid{buf_id}.bin", "wb")
-    out.write(buffer)
+    with open(f"tclbuf_iid{iid}_bufid{buf_id}.bin", "wb") as out:
+        out.write(buffer)
 
 
 if __name__ == '__main__':
